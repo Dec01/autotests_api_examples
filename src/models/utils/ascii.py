@@ -10,5 +10,3 @@ class BColors:
     UNDERLINE = '\033[4m'
 
 
-class MethodTypes:
-    type_list = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']

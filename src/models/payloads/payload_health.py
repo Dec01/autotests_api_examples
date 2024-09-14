@@ -1,5 +1,4 @@
-from pydantic import Field, ValidationError, BaseModel, ConfigDict, field_validator
-from src.models.utils.ascii import BColors
+from pydantic import Field, ValidationError, BaseModel, field_validator
 from src.models.processing_request.response_processing import PydanticResponseError
 
 
