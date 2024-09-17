@@ -1,5 +1,5 @@
 from pydantic import Field, ValidationError, BaseModel, field_validator
-from src.models.processing_request.response_processing import PydanticResponseError
+from src.models.processings.processing_validate import PydanticResponseError
 
 
 class HealthValidateSchema(BaseModel):
@@ -22,7 +22,7 @@ class HealthValidateSchema(BaseModel):
 class HealthValidate:
 
     @staticmethod
-    def response_health_check(data):
+    def response_default(data):
         try:
             return HealthValidateSchema.model_validate(data)
         except ValidationError as e:

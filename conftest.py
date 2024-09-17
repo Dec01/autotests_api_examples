@@ -2,7 +2,7 @@ import time
 
 import pytest
 
-from src.models.processing_request.processing_request import Requests, AsyncRequests
+from src.models.processings.processing_request import Requests, AsyncRequests
 
 
 def pytest_addoption(parser):

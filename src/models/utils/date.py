@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 
-class DateGeneration:
+class DateGeneration2Days:
     @staticmethod
     def start_date():
         current_date = datetime.now()

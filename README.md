@@ -23,7 +23,7 @@ reports/pytest/result.xml
 ```
 ## Общая структура проекта
 ```
-├── prosv
+├── project
     ├───logs - логирование
     ├───reports - репорты по прогону
     │   └───pytest
