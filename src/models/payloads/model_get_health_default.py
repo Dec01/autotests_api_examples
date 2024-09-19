@@ -2,7 +2,7 @@ from pydantic import Field, ValidationError, BaseModel, field_validator
 from src.models.processings.processing_validate import PydanticResponseError
 
 
-class HealthValidateSchema(BaseModel):
+class ResponseGetHealthDefault(BaseModel):
     status: str = Field(...)
     warnings: object = Field(...)
 
@@ -19,11 +19,11 @@ class HealthValidateSchema(BaseModel):
         return v
 
 
-class HealthValidate:
+class ValidateGetHealthDefault:
 
     @staticmethod
     def response_default(data):
         try:
-            return HealthValidateSchema.model_validate(data)
+            return ResponseGetHealthDefault.model_validate(data)
         except ValidationError as e:
             PydanticResponseError.print_error(e)
