@@ -5,8 +5,8 @@ ARG run_domain
 ENV env $run_env
 ENV domain $run_domain
 
-LABEL "channel"="PROSV"
-LABEL "Creator"="CORP-PROSV"
+LABEL "channel"="TEST"
+LABEL "Creator"="TEST-TEST"
 
 WORKDIR ./usr/corp-prosv-stable
 COPY . .
