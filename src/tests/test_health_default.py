@@ -24,6 +24,7 @@ class TestGetHealthV1Req:
 
 
 @pytest.mark.dev
+@pytest.mark.asyncio
 class TestGetHealthV2HttpxAsync:
 
     async def test_get_health_check(self, domain, async_req):
@@ -41,6 +42,7 @@ class TestGetHealthV2HttpxAsync:
 
 
 @pytest.mark.dev
+@pytest.mark.asyncio
 class TestGetHealthV3MoreTestsToGodTests:
 
     data_get_health = None

@@ -11,7 +11,8 @@ service = PathsServices.services_paths.get('health_check')
 get_filters_keys = ParamsGetHealthParams.request_filter(None).keys()
 get_sorts_keys = ParamsGetHealthParams.request_sorts('queue', None, None)
 @pytest.mark.dev
-class TestHealthCheckV1Req:
+@pytest.mark.asyncio
+class TestHealthParams:
 
     uuid_list = []
 

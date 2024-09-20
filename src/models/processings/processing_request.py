@@ -155,3 +155,31 @@ class AsyncRequests(object):
             return AsyncRequests.delete_request(url, method_url, headers)
         else:
             return False
+
+
+class RequestLanguage:
+    header_en_one = {'Accept-Language': 'en'}
+    header_en = {'Accept-Language': 'en-US'}
+    header_ru_one = {'Accept-Language': 'ru'}
+    header_ru = {'Accept-Language': 'ru-Ru'}
+    header_default = {}
+    header_error = {'Accept-Language': 'zu-Ze'}
+    header_preference_ru = {'Accept-Language': 'ru-RU,ru;q=0.9,en-GB;q=0.8,en;q=0.7,be-BY;q=0.6,be;q=0.5,en-US;q=0.4'}
+    header_preference_en = {'Accept-Language': 'ru-RU,ru;q=0.7,en-GB;q=0.8,en;q=0.9,be-BY;q=0.6,be;q=0.5,en-US;q=0.4'}
+
+class RequestToken:
+
+    token_role = {
+        'ROLE_SUPER_ADMIN': '123123123-213123123-213123123',
+        'ROLE_ADMIN': '2332323-23232323-23232323-232323',
+        'ROLE_MANAGER': '232323232-453-43-4345-535-34343434',
+        'ROLE_EDITOR': '33432423-4324234343-43434343434-4343434',
+        'ROLE_MODERATOR': '43434342321352-213523523523-235235235'
+    }
+
+    @staticmethod
+    def response_token_role(role):
+        for i in RequestToken.token_role:
+            if i == role:
+                return_token_role = {'Authorization': f'Bearer {RequestToken.token_role.get(role)}'}
+                return return_token_role
